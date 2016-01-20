@@ -1,0 +1,56 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+html,body{
+	font-family: 'Lato'
+}
+nav > li{
+	font-size: 18px;
+	font-weight: bold;
+}
+.navbar-default{
+	background-color: #25A58C;
+	height: 70px;
+}
+a.navbar-brand{
+	color: #ffffff !important;
+    font-size: 36px;
+    padding: 20px 20px;
+}
+
+.navbar-right > li > a {
+	color: #ffffff !important;
+    font-size: 18px;
+    padding: 20px 10px;
+    margin: 0 20px;
+}
+.formulario{
+	padding: 1em;
+}
+.navbar-right > li:active{
+	background-color: transparent !important;
+}
+.field{
+	margin: 1em;
+}
+.form-control{
+	border: none!important;
+	border-bottom: 2px solid!important;
+	outline: none!important;
+	width: 100%!important;
+	padding:10px 0!important;
+	font-size: 1.2em!important;
+}
+

@@ -1,0 +1,25 @@
+<h1><%= @article.title %></h1>
+<div>
+	<%= @article.body%> - 
+	<%= link_to "Editar", edit_article_path(@article)%>
+	<br>
+	<br>
+	<% if @article.user.email == current_user.email %>
+	<strong>Escrito por mí</strong>
+	<%else%>
+	<strong>Escrito por : <%= @article.user.email %></strong>
+	<%end%>
+	<br>
+	<strong>Visto : <%= @article.visits_count %> veces!</strong>
+	<h3>Comentarios</h3>
+		<ul>
+		<% @article.comments.each do |comment|%>
+			<li>
+				<%= comment.body %> - <strong>Por: <%=comment.user.email%></strong>
+			</li>
+		<%end%>
+		</ul>
+	<div class="field">
+		<%= render "comments/form"%>
+	</div>
+</div>
