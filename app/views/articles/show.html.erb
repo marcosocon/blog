@@ -4,7 +4,7 @@
 	<%= link_to "Editar", edit_article_path(@article)%>
 	<br>
 	<br>
-	<% if @article.user.email == current_user.email %>
+	<% if user_signed_in? && @article.user.email == current_user.email %>
 	<strong>Escrito por mí</strong>
 	<%else%>
 	<strong>Escrito por : <%= @article.user.email %></strong>
@@ -12,7 +12,7 @@
 	<br>
 	<strong>Visto : <%= @article.visits_count %> veces!</strong>
 	<h3>Comentarios</h3>
-		<ul>
+		<ul id="comments-box">
 		<% @article.comments.each do |comment|%>
 			<li>
 				<%= comment.body %> - <strong>Por: <%=comment.user.email%></strong>

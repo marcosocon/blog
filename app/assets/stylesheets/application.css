@@ -9,7 +9,14 @@
  * compiled file so the styles you add here take precedence over styles defined in any styles
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
- *
+ *= require 'masonry/basic'
+ *= require 'masonry/centered'
+ *= require 'masonry/fluid'
+ *= require 'masonry/gutters'
+ *= require 'masonry/infinitescroll'
+ *= require 'masonry/right-to-left'
+ *= require 'masonry/transitions'
+ *= require 'font-awesome'
  *= require_tree .
  *= require_self
  */
@@ -52,5 +59,95 @@ a.navbar-brand{
 	width: 100%!important;
 	padding:10px 0!important;
 	font-size: 1.2em!important;
+}
+
+
+
+
+
+
+
+#masonry-container {
+	margin: 0 auto;
+  background: #FFF;
+  padding: 5px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  clear: both;
+  -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+          border-radius: 5px;
+}
+
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; }
+.box{
+	 box-shadow: 3px 3px 3px 2px #888888;
+	padding: 0!important;
+	width: 236px;
+	height: auto;
+	margin: 10px!important;
+}
+.box > img{
+	border-radius: 5px;
+}
+
+
+.centered { margin: 0 auto; }
+.transitions-enabled.masonry,
+.transitions-enabled.masonry .masonry-brick {
+  -webkit-transition-duration: 0.7s;
+     -moz-transition-duration: 0.7s;
+      -ms-transition-duration: 0.7s;
+       -o-transition-duration: 0.7s;
+          transition-duration: 0.7s;
+}
+
+.transitions-enabled.masonry {
+  -webkit-transition-property: height, width;
+     -moz-transition-property: height, width;
+      -ms-transition-property: height, width;
+       -o-transition-property: height, width;
+          transition-property: height, width;
+}
+
+.transitions-enabled.masonry  .masonry-brick {
+  -webkit-transition-property: left, right, top;
+     -moz-transition-property: left, right, top;
+      -ms-transition-property: left, right, top;
+       -o-transition-property: left, right, top;
+          transition-property: left, right, top;
+}
+
+
+/* disable transitions on container */
+.transitions-enabled.infinite-scroll.masonry {
+  -webkit-transition-property: none;
+     -moz-transition-property: none;
+      -ms-transition-property: none;
+       -o-transition-property: none;
+          transition-property: none;
+}
+.info{
+	padding: 3px;
+}
+.info > img{
+	border-radius: 50%;
+	width: 10%;
+	float: left;
+}
+.text{
+	width: 90%;
+	float: left;
+	margin-bottom: 5px;
+}
+.text > strong{
+	width: 100%;
+	margin: 7px;
+}
+.text > #tiempo{
+	width: 100%;
+	margin: 15px;
 }
 

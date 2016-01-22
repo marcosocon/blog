@@ -3,15 +3,21 @@ class CommentsController < ApplicationController
   before_action :set_article
   before_action :authenticate_user!
 
-  respond_to :html
+  
 
   def create
     @comment = current_user.comments.new(comment_params)
     @comment.article = @article
-    @comment.save
-    redirect_to @comment.article
+    respond_to do |format|
+      if @comment.save
+        format.html {redirect_to @comment.article, notice: "Comentario satisfactoriamente creado!"}
+        format.json {render :show, status: :created, location: @comment.article}
+      else
+        format.json {render json: @comments.errors, status: :unprocessable_entity}
+    end
   end
-
+end
+respond_to :html
   def update
     @comment.update(comment_params)
     redirect_to @comment.article

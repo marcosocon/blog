@@ -1,5 +1,5 @@
 GEM
-  remote: https://rubygems.org/
+  remote: http://rubygems.org/
   specs:
     actionmailer (4.1.8)
       actionpack (= 4.1.8)
@@ -46,17 +46,26 @@ GEM
       warden (~> 1.2.3)
     erubis (2.7.0)
     execjs (2.6.0)
+    font-awesome-rails (4.5.0.0)
+      railties (>= 3.2, < 5.0)
     hike (1.2.3)
     i18n (0.7.0)
+    imagesLoaded_rails (3.1.8)
+      railties (>= 3.1)
     jbuilder (2.4.0)
       activesupport (>= 3.0.0, < 5.1)
       multi_json (~> 1.2)
     jquery-rails (3.1.4)
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
+    jquery-turbolinks (2.1.0)
+      railties (>= 3.1.0)
+      turbolinks
     json (1.8.3)
     mail (2.6.3)
       mime-types (>= 1.16, < 3)
+    masonry-rails (0.2.4)
+      railties
     mime-types (2.99)
     minitest (5.8.3)
     multi_json (1.11.2)
@@ -125,8 +134,12 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   coffee-script-source (~> 1.8.0)
   devise
+  font-awesome-rails
+  imagesLoaded_rails
   jbuilder (~> 2.0)
   jquery-rails
+  jquery-turbolinks
+  masonry-rails (~> 0.2.4)
   rails (= 4.1.8)
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)
