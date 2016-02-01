@@ -13,9 +13,12 @@ gem 'masonry-rails' , '~> 0.2.4'
 gem 'jquery-turbolinks'
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '~> 4.0.0'
+
 gem 'coffee-script-source', '~> 1.8.0'
+# Using font-awesome for cool icons
 gem 'font-awesome-rails'
-gem 'imagesLoaded_rails'
+#Using paperclip for attachments.
+gem 'paperclip'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
  # gem 'therubyracer',  platforms: :ruby
 gem 'devise'
