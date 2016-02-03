@@ -27,6 +27,9 @@
       <ul class="nav navbar-nav navbar-right">
         <li><%= link_to "Inicio", root_path%></li>
         <li><%= link_to "Articulos", articles_path%></li>
+        <%@categories.each do |cat|%>
+        <li><%=link_to cat.name, cat%></li>
+        <%end%>
                 <% if user_signed_in? %>
         <li><%= link_to "Nuevo Articulo", new_article_path%></li>
         <li><%= link_to "Cerrar Sesíon", destroy_user_session_path, method: :delete%></li>

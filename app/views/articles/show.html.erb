@@ -1,5 +1,8 @@
 <h1><%= @article.title %></h1>
 <div>
+	<div>
+		<%= image_tag @article.cover.url(:thumb) %>
+	</div>
 	<%= @article.body%> - 
 	<%= link_to "Editar", edit_article_path(@article)%>
 	<br>
